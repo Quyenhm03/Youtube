@@ -135,16 +135,16 @@ hr {
   margin-bottom: 30px;
 }
 
-.video__thumbnail {
+/* .video__thumbnail {
   width: 100%;
   height: 170px;
-}
+} */
 
-.video__thumbnail img {
+/* .video__thumbnail img {
   object-fit: cover;
   height: 100%;
   width: 100%;
-}
+} */
 
 .author img {
   object-fit: cover;
@@ -186,6 +186,32 @@ h1 {
 
 .sidebar__category a {
   text-decoration: none;
+}
+
+.video__thumbnail {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 170px;
+}
+
+.video__thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video__thumbnail img:last-child {
+  width: 30%; /* Điều chỉnh kích thước phù hợp */
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 @media (max-width: 425px) {
